@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan Amar & Uswatun</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover" id="cover">
+  <div class="glass">
+    <h4>Undangan Pernikahan</h4>
+    <h1>Amar & Uswatun</h1>
+    <p>Kepada Yth.</p>
+    <p class="guest" id="guestName">Tamu Undangan</p>
+    <button onclick="openInvitation()">Buka Undangan</button>
+  </div>
+</section>
+
+<!-- AUDIO -->
+<audio id="music" loop preload="auto">
+  <source src="assets/music/Idgitaf-Sedia_Aku_sebelum_hujan.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MAIN -->
+<main id="content" class="hidden">
+
+<section class="hero glass">
+  <img src="assets/img/photo_weeding.png">
+  <h1>Amar & Uswatun</h1>
+  <p class="date">Minggu, 31 Januari 2026</p>
+
+  <div class="countdown" >
+  <div class="countdown-box">
+    <span id="days">00</span>
+    <small>Hari</small>
+  </div>
+  <div class="countdown-box">
+    <span id="hours">00</span>
+    <small>Jam</small>
+  </div>
+  <div class="countdown-box">
+    <span id="minutes">00</span>
+    <small>Menit</small>
+  </div>
+  <div class="countdown-box">
+    <span id="seconds">00</span>
+    <small>Detik</small>
+  </div>
+</div>
+
+</section>
+
+<section class="glass">
+  <p class="ayat">
+    “Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri,
+    supaya kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”
+    <br><strong>(QS. Ar-Rum : 21)</strong>
+  </p>
+</section>
+
+<section class="glass">
+  <h2>Mempelai</h2>
+  <p><strong>M. Amar Alfa Nur</strong><br>Putra dari Bpk Fulan & Ibu Fulanah</p>
+  <p><strong>Uswatun Hasanah</strong><br>Putri dari Bpk Fulan & Ibu Fulanah</p>
+</section>
+
+<section class="glass">
+  <h2>Acara</h2>
+  <p><strong>Akad & Resepsi</strong></p>
+  <p>09:00 WIB</p>
+  <p>Rumah Bpk .......</p>
+  <p>Ds 1 Madiun Rengas, Kec Bekri</p>
+  <a href="https://maps.app.goo.gl/RusxEoGeTxpVakpQ8" target="_blank">📍 Buka Maps</a>
+</section>
+
+<!--Galery-->
+<section class="glass">
+  <h2>Galeri Foto</h2>
+
+  <div class="gallery">
+    <img src="assets/img/1.jpg" onclick="openGallery(this)">
+    <img src="assets/img/2.jpg" onclick="openGallery(this)">
+    
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="galleryModal" class="modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <img id="modalImg">
+</div>
+
+<!--RSVP-->
+<section class="glass">
+  <h2>RSVP</h2>
+
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfpO7rw-yNcWxCUovC0H66ZR_w-1-gzANCcqV7iMc9tzj5EDg/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="submitted=true">
+
+    <input type="text" name="entry.1181089416" placeholder="Nama" required>
+
+    <select name="entry.1808105186">
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+
+    <textarea name="entry.1390647478" placeholder="Ucapan & Doa"></textarea>
+
+    <button type="submit">Kirim RSVP</button>
+  </form>
+
+  <div class="glass">
+    <h2>Ucapan & Doa</h2>
+    <div id="rsvpList"></div>
+  </div>
+  
+
+  <iframe name="hidden_iframe" style="display:none"></iframe>
+</section>
+
+
+<footer>
+  <p>Terima kasih atas doa dan restunya 🤍</p>
+</footer>
+
+</main>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
